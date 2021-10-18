@@ -34,21 +34,31 @@ class App extends Component {
     }
   }
 
+  handleRemove = (id) => {
+    this.setState({
+      todos:this.state.todos.filter((todo) => todo.id !== id)
+    });
+  }
+
+  handleToggle = (id) => {
+    this.setState({
+      todos: this.state.todos.map((todo) => todo.id === id ? {...todo,checked:!todo.checked}:todo)
+    });
+  }
+
 
     render() {
-      const { input } = this.state;
-      const { handleChange, handleCreate, handleKeyPress } = this;
+      const { input,todos } = this.state;
+      const { handleChange, handleCreate, handleKeyPress, handleRemove, handleToggle } = this;
       return (
         <div>
           <TodoListTemplate form={<Form
             todo={input}
             myChange={handleChange}
             myCreate={handleCreate}
-            myKeyPress={handleKeyPress}
-
-
+            myKeyPress={handleKeyPress}            
           />} >
-            <TodoItemList />
+            <TodoItemList todos={todos} myRemove={handleRemove} myToggle={handleToggle}/>
           </TodoListTemplate>
         </div>
       );
