@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
+// cmd에서 npm install react-redux
+// cmd에서 npm install redux
 //리액트를가져오는 코드 임포트.
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
