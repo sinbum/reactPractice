@@ -5,6 +5,8 @@ const applyMiddleware = redux.applyMiddleware;
 const logger = reduxLogger.createLogger();
 const combineReducers = redux.combineReducers;
 
+//npm init -y
+
 // actions
 // action-types
 const ADD_SUBSCRIBER = 'ADD_SUBSCRIBER'
