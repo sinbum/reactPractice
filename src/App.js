@@ -2,17 +2,30 @@ import Day from './practice/Day';
 import DayList from './practice/DayList';
 import Header from './practice/Header';
 
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-     <Header />
-     <DayList />
-     <Day />
-    </div>
-  );
+    return (
+        // BrowserRouter를 App Div 컴포넌트 전체를 감싼다.
+        <BrowserRouter>
+            <div className="App">
+                <Header/>
+                {/* 스위치 내부는 url에 따라 각각 다르게 보여질 것이다. 스위치 외부는 모든 페이지에 공통으로 노출된다. */}
+
+                <Switch>
+                  {/* path='/' 첫 페이지를 의미한다. */}
+                  <Route exact path="/">
+                    <DayList/>
+                  </Route>
+                  {/* /day에도 '/' 가 포함되어있기때문에 DayList가 나온다. 따라서 위 Route컴포넌트에 exact 옵션을 추가해준다. */}
+                  <Route path="/day">
+                    <Day/>                    
+                  </Route>
+                </Switch>
+
+            </div>
+        </BrowserRouter>
+    );
 }
-
-
 
 export default App;

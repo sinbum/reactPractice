@@ -11,6 +11,7 @@ const wordList = dummy.words.filter(word => (word.day === day));
 console.log(wordList)
 
     return <>
+    <h2>Day {day}</h2>
         <table>
             <tbody>
                 {wordList.map(word => (
