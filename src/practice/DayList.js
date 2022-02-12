@@ -7,7 +7,7 @@ export default function DayList(){
     return <ul className="list_day">
         {dummy.days.map(row => (
 
-            <li>Day {row.day}</li>
+            <li key = {row.id}>Day {row.day}</li>
         ))
 
         }
