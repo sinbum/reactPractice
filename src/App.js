@@ -3,6 +3,7 @@ import DayList from './practice/DayList';
 import Header from './practice/Header';
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import EmptyPage from './practice/EmptyPage';
 
 function App() {
     return (
@@ -20,7 +21,12 @@ function App() {
                   {/* /day에도 '/' 가 포함되어있기때문에 DayList가 나온다. 따라서 위 Route컴포넌트에 exact 옵션을 추가해준다. */}
                   {/* uri 에서 파라미터 값을 얻을 수 있다. 즉 컾모넌트 내에서 사용할수있다. 아래와 같이 ':' 콜론을 넣어 줄경우에. 한함. */}
                   <Route path="/day/:day">
-                    <Day/>                    
+                    <Day/>
+                  </Route>
+
+                  {/* 앞에있는 조건이 모두 만족하지 않으면 아래 페이지로 돌아가게 된다. */}
+                  <Route>
+                    <EmptyPage />
                   </Route>
                 </Switch>
 
