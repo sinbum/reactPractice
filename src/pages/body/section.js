@@ -25,7 +25,6 @@ const Section = () => {
 }
 
  function jsondata (){   
-     //console.log(JsonTempData)
 
      JsonTempData.list.forEach(row => console.log(row))
 
