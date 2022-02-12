@@ -1,4 +1,5 @@
 import { useState } from "react";
+import UserName from "./UserName";
 
 
 
@@ -11,6 +12,7 @@ export default function Hello(props) {
         <div>
             <h1>state</h1>
             <h2 id="name">{name}({age})</h2>
+            <UserName name= {name}></UserName>
            <button onClick={()=>{
                  const newName = name === 'Mike' ? 'Jain' : 'Mike';
                  setName(newName);
