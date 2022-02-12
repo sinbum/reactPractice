@@ -9,6 +9,11 @@ function App() {
        {/* <Section/> */}
 
        <Hello></Hello>
+       <Hello></Hello>
+
+       <Hello></Hello>
+
+
        
     </div>
   );
