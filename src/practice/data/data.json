@@ -10,42 +10,42 @@
             "day" : 1,
             "eng" : "book",
             "kor" : "책",
-            "inDone" : false
+            "isDone" : true
         },
         {
             "id" : 2,
             "day" : 1,
             "eng" : "apple",
             "kor" : "사과",
-            "inDone" : false
+            "isDone" : false
         },
         {
             "id" : 3,
             "day" : 2,
             "eng" : "car",
             "kor" : "자동차",
-            "inDone" : false
+            "isDone" : false
         },
         {
             "id" : 4,
             "day" : 2,
             "eng" : "pen",
             "kor" : "펜",
-            "inDone" : false
+            "isDone" : false
         },
         {
             "id" : 5,
             "day" : 3,
             "eng" : "school",
             "kor" : "학교",
-            "inDone" : false
+            "isDone" : false
         },
         {
             "id" : 6,
             "day" : 3,
             "eng" : "pencil",
             "kor" : "연필",
-            "inDone" : false
+            "isDone" : false
         }
         
         
