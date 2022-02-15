@@ -1,32 +1,15 @@
-import {useEffect, useState} from "react";
 import {Link} from "react-router-dom"
+import useFetch from "./hooks/useFetch";
 
 export default function DayList() {
-    const [days, setDays] = useState([]);
-    //console.log(dummy)
-    const [count, setCount] = useState(0);
+    //const [days, setDays] = useState([]);
+    const days = useFetch('http://localhost:3001/days');
 
-    function onclick(){
-        setCount(count + 1);
-    }
+    // if(days.length === 0){
+    //     return <span>Loading...</span>
+    // }
 
-    function onclick2(){
-        setDays([
-            ...days,
-            {
-                id: Math.random(),
-                day: 1,
-            }]
-        );
-    }
-
-    useEffect(() => {
-        console.log('change');
-    }, []); //렌더링 직후 딱 한번만 실행하는것은 빈배열을 전달하면 된다.
-
-
-
-    return (<>
+    return (
     <ul className="list_day">
         {
             days.map(row => (
@@ -41,8 +24,7 @@ export default function DayList() {
             ))
         }
     </ul>
-    <button onClick={onclick}>{count}</button>
-    <button onClick={onclick2}>Day Change</button>
+  
 
-    </>)
+    )
 }
