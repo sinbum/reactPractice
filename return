@@ -1,0 +1,11 @@
+[33mcommit ee1087360c2a592584c16293261495e908590f30[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m)[m
+Author: sinbum <sinbum3419@gmail.com>
+Date:   Tue Feb 15 09:14:44 2022 +0900
+
+    초기사용 설정
+
+[33mcommit c882ac84619fc03f3b71a444cc599c21d07d8f6c[m[33m ([m[1;32mmaster[m[33m)[m
+Author: sinbum <sinbum3419@gmail.com>
+Date:   Tue Feb 15 09:03:28 2022 +0900
+
+    Initialize project using Create React App
